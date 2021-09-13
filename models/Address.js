@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const AddresSchema = mongoose.model({
+const AddresSchema = mongoose.Schema({
   ID: {
     type: mongoose.Types.ObjectId,
   },
@@ -9,3 +9,7 @@ const AddresSchema = mongoose.model({
   postCode: String,
   city: String,
 });
+
+const Address = mongoose.model("Address", AddresSchema);
+
+module.exports = Address
